@@ -98,7 +98,7 @@ function getLongitudeTerm(data, index) {
         lon_term = longitude_terms[lon];
         if (data[index][lon_term] !== undefined) {
             return lon_term;
-        } 
+        }
     }
 }
 

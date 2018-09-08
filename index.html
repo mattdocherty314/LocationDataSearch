@@ -12,6 +12,7 @@
 crossorigin=""></script>
     </head>
     <body>
+        <a href="about.html">About</a>
         <h1> Location Data Search </h1>
         <p> Data Search: </p><input id="input_search"/>
         <p> Location: </p><input id="location_search"/>
@@ -21,9 +22,63 @@ crossorigin=""></script>
         <p id="location_result" hidden></p>
         <p id="input_result" hidden></p>
         <p id="run" hidden></p>
-
-        <div id="results">
+        <div id="results" hidden>
         </div>
     <div id="map" style="width: 600px; height: 400px;"></div>
+    <div id="fake-data-show-1" hidden>
+        <h2> 'wave' Data within 100km of Brisbane </h2>
+        <h3><a href="">Brisbane</a></h3>
+        <p> Wave Height: 1.48m </p>
+        <p> Water Temp: 20.1C </p> 
+        <h3><a href="">Sunshine Coast</a></h3>
+        <p> Wave Height: 1.28m </p>
+        <p> Water Temp: 21.3C </p> 
+        <h3><a href="">Gold Coast</a></h3>
+        <p> Wave Height: 1.37m </p>
+        <p> Water Temp: 19.8C </p> 
+        <h3><a href="">Morton Bay</a></h3>
+        <p> Wave Height: 3.2m </p>
+        <p> Water Temp: 33.7C </p> 
+    </div>
+    <div id="fake-data-show-2" hidden>
+        <h2> 'wave and accident' Data within 100km of Brisbane </h2>
+        <h3><a href="">Brisbane</a></h3>
+        <p> Type of Data: 'wave'</p>
+        <p> Wave Height: 1.48m </p>
+        <p> Water Temp: 20.1C </p> 
+        <h3><a href="">Sunshine Coast</a></h3>
+        <p> Type of Data: 'wave'</p>
+        <p> Wave Height: 1.28m </p>
+        <p> Water Temp: 21.3C </p> 
+        <h3><a href="">Gold Coast</a></h3>
+        <p> Type of Data: 'wave'</p>
+        <p> Wave Height: 1.37m </p>
+        <p> Water Temp: 19.8C </p> 
+        <h3><a href="">Morton Bay</a></h3>
+        <p> Type of Data: 'wave'</p>
+        <p> Wave Height: 3.2m </p>
+        <p> Water Temp: 33.7C </p>
+
+        <h3><a href="">Central Brisbane</a></h3>
+        <p> Type of Data: 'accident'</p>
+        <p> Year: 2012 </p>
+        <p> Crash Type: vehicle </p>
+        <p> Crash Amount (year): 53 </p> 
+        <h3><a href="">Ipswich</a></h3>
+        <p> Type of Data: 'accident'</p>
+        <p> Year: 2016 </p>
+        <p> Crash Type: vehicle </p>
+        <p> Crash Amount (year): 23 </p> 
+        <h3><a href="">South Brisbane</a></h3>
+        <p> Type of Data: 'accident'</p>
+        <p> Year: 2013 </p>
+        <p> Crash Type: vehicle </p>
+        <p> Crash Amount (year): 45 </p> 
+        <h3><a href="">Nothern Brisbane</a></h3>
+        <p> Type of Data: 'accident'</p>
+        <p> Year: 2015 </p>
+        <p> Crash Type: vehicle </p>
+        <p> Crash Amount (year): 34 </p> 
+    </div>
 </body>
 </html>

@@ -46,7 +46,25 @@ function getRelevantData(results, location) {
         }
         if (data !== undefined) {
             (data.records).forEach(function(d) {
-                var data_location = [d["Longitude"], d["Latitude"]];
+                var longitude_terms = ["Longitude", "Long_GDA04"];
+                var lon_used;
+                for (lon in longitude_terms) {
+                    lon_term = longitude_terms[lon];
+                    if (d[lon_term] !== undefined) {
+                        lon_used = lon_term;
+                        break;
+                    } 
+                }
+                var lat_used;
+                var latitude_terms = ["Latitude", "Lat_GDA94"];
+                for (lat in latitude_terms) {
+                    lat_term = latitude_terms[lat];
+                    if (d[lat_term] !== undefined) {
+                        lat_used = lat_term;
+                        break;
+                    } 
+                }
+                var data_location = [d[lon_used], d[lat_used]];
                 if (checkLocation(data_location, location)) {
                     data_set.push(d);
                 }

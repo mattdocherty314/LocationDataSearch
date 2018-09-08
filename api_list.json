@@ -4,5 +4,167 @@
         "desc": "Environmental monitoring site locations available in CSV format",
         "api_key": "https://data.qld.gov.au/api/action/datastore_search?resource_id=37eab16f-d391-44e3-93aa-b0dac0a6a2d8",
         "api_type": "json"
+    },
+    {
+        "title": "Fitzroy River (Drainage basin 130)",
+        "desc": "DSITIA staff sample Chlorophyll-a, observe Secchi depth and measure physiochemical depth profiles at 12 Fitzroy River tidal estuarine sites and sample nutrients at two sites.",
+        "api_key": "https://data.qld.gov.au/api/action/datastore_search?resource_id=831dc300-2e2c-4a90-a87e-3dcd74947025",
+        "api_type": "json"
+    },
+    {
+        "title": "Calliope River and anabranch (Basin 132)",
+        "desc": "DSITIA staff sample Chlorophyll-a, observe Secchi depth and measure physiochemical depth profiles at nine Calliope River tidal estuarine sites and sample nutrients at two sites.",
+        "api_key": "https://data.qld.gov.au/api/action/datastore_search?resource_id=6695c762-a441-40c8-87d8-e918bcd785b9",
+        "api_type": "json"
+    },
+    {
+        "title": "Boyne River and South Trees Inlet (Basin 133)",
+        "desc": "DSITIA staff sample Chlorophyll-a, observe Secchi depth and measure physiochemicals at six Boyne River and South Trees Inlet sites and sample nutrients at three sites.",
+        "api_key": "https://data.qld.gov.au/api/action/datastore_search?resource_id=db525bfc-424e-4b2b-9f93-d2989370af5f",
+        "api_type": "json"
+    },
+    {
+        "title": "Baffle Creek (Drainage basin 134)",
+        "desc": "DSITIA staff sample Chlorophyll-a, observe Secchi depth and measure physiochemical depth profiles at six Baffle Creek tidal estuarine sites and sample nutrients at four sites.",
+        "api_key": "https://data.qld.gov.au/api/action/datastore_search?resource_id=e8d7b7fa-5ae5-408a-b120-a09d4356df8b",
+        "api_type": "json"
+    },
+    {
+        "title": "Kolan River (Drainage basin 135)",
+        "desc": "DSITIA staff sample Chlorophyll-a, observe Secchi depth and measure physiochemical depth profiles at five Kolan River tidal estuarine sites and sample nutrients at one site.",
+        "api_key": "https://data.qld.gov.au/api/action/datastore_search?resource_id=8d66df0f-2c1f-47ce-b543-2f4f0710fca2",
+        "api_type": "json"
+    },
+    {
+        "title": "Burnett River (Drainage basin 136)",
+        "desc": "DSITIA staff sample Chlorophyll-a, observe Secchi depth and measure physiochemical depth profiles at 10 Burnett River tidal estuarine sites and sample nutrients at six sites.",
+        "api_key": "https://data.qld.gov.au/api/action/datastore_search?resource_id=8653d368-9201-47fd-bb84-0c643cf6694a",
+        "api_type": "json"
+    },
+    {
+        "title": "Burrum River (Drainage Basin 137)",
+        "desc": "DSITIA staff sample Chlorophyll-a, observe Secchi depth and measure physiochemical depth profiles at four Burrum River tidal estuarine sites and sample nutrients at two sites.",
+        "api_key": "https://data.qld.gov.au/api/action/datastore_search?resource_id=32e0fc64-033d-41da-9b3a-a3d209cd1c00",
+        "api_type": "json"
+    },
+    {
+        "title": "Isis River (Drainage basin 137)",
+        "desc": "DSITIA staff sample Chlorophyll-a, observe Secchi depth and measure physiochemical depth profiles at three Isis River tidal estuarine sites and sample nutrients at one site.",
+        "api_key": "https://data.qld.gov.au/api/action/datastore_search?resource_id=988175ce-2e18-4fe0-a870-f899c33b94e7",
+        "api_type": "json"
+    },
+    {
+        "title": "Gregory River (Drainage basin 137)",
+        "desc": "DSITIA staff sample Chlorophyll-a, observe Secchi depth and measure physiochemical depth profiles at three Gregory River tidal estuarine sites and sample nutrients at one site.",
+        "api_key": "https://data.qld.gov.au/api/action/datastore_search?resource_id=d5d5e1cf-04b4-476d-966f-132a20446d78",
+        "api_type": "json"
+    },
+    {
+        "title": "Mary River (Drainage basin 138)",
+        "desc": "DSITIA staff sample Chlorophyll-a, observe Secchi depth and measure physiochemical depth profiles at 12 Mary River tidal estuarine sites and sample nutrients at two sites.",
+        "api_key": "https://data.qld.gov.au/api/action/datastore_search?resource_id=9ce9d222-3793-49d0-b57b-9a501510a53a",
+        "api_type": "json"
+    },
+    {
+        "title": "Great Sandy Straits and Hervey Bay (Drainage basin 138)",
+        "desc": "DSITIA staff sample Chlorophyll-a, observe Secchi and measure physiochemical profiles at eight Great Sandy Straits and Hervey Bay sites and sample nutrients at four sites.",
+        "api_key": "https://data.qld.gov.au/api/action/datastore_search?resource_id=efb1c095-a866-4c5e-9653-161be5823574",
+        "api_type": "json"
+    },
+    {
+        "title": "Tin Can Inlet & Snapper Creek (Drainage basin 140)",
+        "desc": "DSITIA staff sample Chlorophyll-a, observe Secchi and measure physiochemical profiles at seven Tin Can Inlet and Snapper Creek sites and sample nutrients at three sites.",
+        "api_key": "https://data.qld.gov.au/api/action/datastore_search?resource_id=fd80c3f5-952a-476d-87b0-651fd44e8303",
+        "api_type": "json"
+    },
+    {
+        "title": "",
+        "desc": "",
+        "api_key": "",
+        "api_type": ""
+    },
+    {
+        "title": "",
+        "desc": "",
+        "api_key": "",
+        "api_type": ""
+    },
+    {
+        "title": "",
+        "desc": "",
+        "api_key": "",
+        "api_type": ""
+    },
+    {
+        "title": "",
+        "desc": "",
+        "api_key": "",
+        "api_type": ""
+    },
+    {
+        "title": "",
+        "desc": "",
+        "api_key": "",
+        "api_type": ""
+    },
+    {
+        "title": "",
+        "desc": "",
+        "api_key": "",
+        "api_type": ""
+    },
+    {
+        "title": "",
+        "desc": "",
+        "api_key": "",
+        "api_type": ""
+    },
+    {
+        "title": "",
+        "desc": "",
+        "api_key": "",
+        "api_type": ""
+    },
+    {
+        "title": "",
+        "desc": "",
+        "api_key": "",
+        "api_type": ""
+    },
+    {
+        "title": "",
+        "desc": "",
+        "api_key": "",
+        "api_type": ""
+    },
+    {
+        "title": "",
+        "desc": "",
+        "api_key": "",
+        "api_type": ""
+    },
+    {
+        "title": "",
+        "desc": "",
+        "api_key": "",
+        "api_type": ""
+    },
+    {
+        "title": "",
+        "desc": "",
+        "api_key": "",
+        "api_type": ""
+    },
+    {
+        "title": "",
+        "desc": "",
+        "api_key": "",
+        "api_type": ""
+    },
+    {
+        "title": "",
+        "desc": "",
+        "api_key": "",
+        "api_type": ""
     }
 ]

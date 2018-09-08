@@ -4,15 +4,22 @@ var api_list = {
 window.addEventListener("load", pageLoad);
 
 function pageLoad() {
-    //console.log("Page Loaded!");
-    var res = ["Environmental Monitoring Site Locations"];
-    var loc = [148, -20, 1];
-    var data = getRelevantData(res, loc);
-    console.log(data);
+    window.setInterval(checkRun, 10);
+}
+
+function checkRun() {
+    if (document.getElementById("run").innerHTML === "run") {
+        document.getElementById("run").innerHTML = "";
+        var res = (document.getElementById("input_result").innerHTML).split(",");
+        var loc = (document.getElementById("location_result").innerHTML).split(",");
+        var data = getRelevantData(res, loc);
+        document.getElementById("results").innerHTML = JSON.stringify(data);
+    }
 }
 
 function getRelevantData(results, location) {
     var data_set = [];
+    console.log(results);
     results.forEach(function(r) {
         link = api_list[r][0];
         format = api_list[r][1];

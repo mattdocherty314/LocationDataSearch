@@ -52,6 +52,6 @@ function getLocation(location_search) {
     xml_req.send();
     if (xml_req.status === 200) {
         var data_json = JSON.parse(xml_req.responseText);
-        return [data_json[0].lon, data_json[0].lat, 1];
+        return [data_json[0].lon, data_json[0].lat, 5];
     }
 }

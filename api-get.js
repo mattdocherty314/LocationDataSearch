@@ -47,9 +47,6 @@ function getRelevantData(results, location) {
         if (data !== undefined) {
             (data.records).forEach(function(d) {
                 var data_location = [d["Longitude"], d["Latitude"]];
-                console.log(d["Site name"]);
-                console.log(location);
-                console.log(data_location);
                 if (checkLocation(data_location, location)) {
                     data_set.push(d);
                 }

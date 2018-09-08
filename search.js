@@ -38,7 +38,7 @@ function startSearch() {
 function getInput(input_search) {
     var results = [];
     for (var title in api_list_search) {
-        if (api_list_search[title].includes(input_search)) {
+        if (api_list_search[title].indexOf(input_search) !== -1) {
             results.push(title);
         }
     }

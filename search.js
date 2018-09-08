@@ -1,22 +1,22 @@
 window.addEventListener("load", pageLoad);
 
-var api_list = {};
+var api_list_search = {};
 
 function pageLoad() {
-    readJSONdb();
+    readJSONdb_search();
     var search_btn = document.getElementById("search");
     search_btn.addEventListener("click", startSearch);
 }
 
-function readJSONdb() {
-    db =  "\api_list.json";
+function readJSONdb_search() {
+    var db_url =  "\api_list.json";
     var xml_req = new XMLHttpRequest();
-    xml_req.open("GET", db, false);
+    xml_req.open("GET", db_url, false);
     xml_req.send();
     if (xml_req.status === 200) {
         var db = JSON.parse(xml_req.responseText);
         for (r in db) {
-            api_list[r] = db[r].desc;
+            api_list_search[db[r]['title']] = db[r]['desc'];
         }
     }
 }
@@ -37,8 +37,8 @@ function startSearch() {
 
 function getInput(input_search) {
     var results = [];
-    for (var title in api_list) {
-        if (api_list[title].includes(input_search)) {
+    for (var title in api_list_search) {
+        if (api_list_search[title].includes(input_search)) {
             results.push(title);
         }
     }

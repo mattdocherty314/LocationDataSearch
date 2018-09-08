@@ -1,22 +1,21 @@
 window.addEventListener("load", pageLoad);
 
-var api_list = {};
-readJSONdb();
-console.log(api_list)
+var api_list_get = {};
 
 function pageLoad() {
+    readJSONdb_get();
     window.setInterval(checkRun, 10);
 }
 
-function readJSONdb() {
-    db =  "\api_list.json";
+function readJSONdb_get() {
+    var db_url =  "\api_list.json";
     var xml_req = new XMLHttpRequest();
-    xml_req.open("GET", db, false);
+    xml_req.open("GET", db_url, false);
     xml_req.send();
     if (xml_req.status === 200) {
         var db = JSON.parse(xml_req.responseText);
         for (r in db) {
-            api_list[r] = [db[r]['api_key'], db[r]['api_type']];
+            api_list_get[db[r]['title']] = [db[r]['api_key'], db[r]['api_type']];
         }
     }
 }
@@ -34,8 +33,8 @@ function checkRun() {
 function getRelevantData(results, location) {
     var data_set = [];
     results.forEach(function(r) {
-        link = api_list[r][0];
-        format = api_list[r][1];
+        link = api_list_get[r][0];
+        format = api_list_get[r][1];
         var data;
         switch(format) {
             case "json":

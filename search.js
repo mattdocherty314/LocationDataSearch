@@ -22,6 +22,8 @@ function readJSONdb_search() {
 }
 
 function startSearch() {
+    document.getElementById("run").innerHTML = "Searching ...";
+    
     var inp_field = document.getElementById("input_search");
     var loc_field = document.getElementById("location_search");
     var inp_out = document.getElementById("input_result");
@@ -32,14 +34,16 @@ function startSearch() {
 
     inp_out.innerHTML = inp_res;
     loc_out.innerHTML = loc_res;
-    document.getElementById("run").innerHTML = "run";
 }
 
 function getInput(input_search) {
     var results = [];
+    var input_search_or = input_search.toLowerCase().split(" or ");
     for (var title in api_list_search) {
-        if (api_list_search[title].indexOf(input_search) !== -1) {
-            results.push(title);
+        for (var inp in input_search_or) {
+            if (api_list_search[title].toLowerCase().indexOf(input_search_or[inp]) !== -1) {
+                results.push(title);
+            }
         }
     }
     return results;

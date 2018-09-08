@@ -21,7 +21,7 @@ function readJSONdb_get() {
 }
 
 function checkRun() {
-    if (document.getElementById("run").innerHTML === "run") {
+    if (document.getElementById("run").innerHTML === "Searching ...") {
         document.getElementById("run").innerHTML = "";
         var res = (document.getElementById("input_result").innerHTML).split(",");
         var loc = (document.getElementById("location_result").innerHTML).split(",");

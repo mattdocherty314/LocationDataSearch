@@ -1,8 +1,24 @@
 window.addEventListener("load", pageLoad);
 
+var api_list = {};
+
 function pageLoad() {
+    readJSONdb();
     var search_btn = document.getElementById("search");
     search_btn.addEventListener("click", startSearch);
+}
+
+function readJSONdb() {
+    db =  "\api_list.json";
+    var xml_req = new XMLHttpRequest();
+    xml_req.open("GET", db, false);
+    xml_req.send();
+    if (xml_req.status === 200) {
+        var db = JSON.parse(xml_req.responseText);
+        for (r in db) {
+            api_list[r] = db[r].desc;
+        }
+    }
 }
 
 function startSearch() {
@@ -20,9 +36,6 @@ function startSearch() {
 }
 
 function getInput(input_search) {
-    var api_list = {
-        "Environmental Monitoring Site Locations": "Environmental monitoring site locations available in CSV format"
-    }
     var results = [];
     for (var title in api_list) {
         if (api_list[title].includes(input_search)) {

@@ -1,10 +1,24 @@
-var api_list = {
-    "Environmental Monitoring Site Locations": ["https://data.qld.gov.au/api/action/datastore_search?resource_id=37eab16f-d391-44e3-93aa-b0dac0a6a2d8", "json"]
-};
 window.addEventListener("load", pageLoad);
+
+var api_list = {};
+readJSONdb();
+console.log(api_list)
 
 function pageLoad() {
     window.setInterval(checkRun, 10);
+}
+
+function readJSONdb() {
+    db =  "\api_list.json";
+    var xml_req = new XMLHttpRequest();
+    xml_req.open("GET", db, false);
+    xml_req.send();
+    if (xml_req.status === 200) {
+        var db = JSON.parse(xml_req.responseText);
+        for (r in db) {
+            api_list[r] = [db[r]['api_key'], db[r]['api_type']];
+        }
+    }
 }
 
 function checkRun() {
@@ -19,7 +33,6 @@ function checkRun() {
 
 function getRelevantData(results, location) {
     var data_set = [];
-    console.log(results);
     results.forEach(function(r) {
         link = api_list[r][0];
         format = api_list[r][1];

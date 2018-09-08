@@ -1,0 +1,7 @@
+{
+    "Environmental Monitoring Site Locations": {
+        "desc": "Environmental monitoring site locations available in CSV format",
+        "api_key": "https://data.qld.gov.au/api/action/datastore_search?resource_id=37eab16f-d391-44e3-93aa-b0dac0a6a2d8",
+        "api_type": "json"
+    }
+}

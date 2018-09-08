@@ -57,11 +57,11 @@ function getRelevantData(results, location) {
 }
 
 function checkLocation(loc_data, loc_want) {
-    d_long = loc_data[0];
-    d_lat = loc_data[1];
-    w_long = loc_want[0];
-    w_lat = loc_want[1];
-    w_dev = loc_want[2];
+    d_long = parseFloat(loc_data[0]);
+    d_lat = parseFloat(loc_data[1]);
+    w_long = parseFloat(loc_want[0]);
+    w_lat = parseFloat(loc_want[1]);
+    w_dev = parseFloat(loc_want[2]);
 
     if ((d_long >= w_long - w_dev) && (d_long <= w_long + w_dev)) {
         if ((d_lat >= w_lat - w_dev) && (d_lat <= w_lat + w_dev)) {

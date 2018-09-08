@@ -52,6 +52,14 @@ function getLocation(location_search) {
     xml_req.send();
     if (xml_req.status === 200) {
         var data_json = JSON.parse(xml_req.responseText);
-        return [data_json[0].lon, data_json[0].lat, 5];
+        var precision = calculatePrecision();
+        return [data_json[0].lon, data_json[0].lat, precision];
     }
+}
+
+function calculatePrecision() {
+    var range_input = document.getElementById("range").value;
+    var range = parseFloat(range_input);
+
+    return range/100; // prec = range/(2*3*6000/360)
 }

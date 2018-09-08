@@ -27,6 +27,19 @@ function checkRun() {
         var loc = (document.getElementById("location_result").innerHTML).split(",");
         var data = getRelevantData(res, loc);
         document.getElementById("results").innerHTML = JSON.stringify(data);
+        var mymap = document.getElementById("mymap");
+//    s         console.log(data)
+             console.log(L);
+//         var marker = L.marker([-27.5434, 152.3343]).addTo(mymap);
+        for (elem in data)
+        {
+            var pointer = [/*parseFloat*/(data[elem]["Latitude"]), 
+                           /*parseFloat*/(data[elem]["Longitude"])];
+            console.log(pointer);
+            var marker = L.marker(pointer).addTo(mymap);
+        }
+
+        
     }
 }
 

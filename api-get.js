@@ -27,16 +27,18 @@ function checkRun() {
         var loc = (document.getElementById("location_result").innerHTML).split(",");
         var data = getRelevantData(res, loc);
         document.getElementById("results").innerHTML = JSON.stringify(data);
-        var mymap = document.getElementById("mymap");
-//    s         console.log(data)
-             console.log(L);
-//         var marker = L.marker([-27.5434, 152.3343]).addTo(mymap);
-        for (elem in data)
-        {
-            var pointer = [/*parseFloat*/(data[elem]["Latitude"]), 
-                           /*parseFloat*/(data[elem]["Longitude"])];
-            console.log(pointer);
-            var marker = L.marker(pointer).addTo(mymap);
+        var map_center = [parseFloat(data[0]["Latitude"]), parseFloat(data[0]["Longitude"])];
+        var map = L.map('map').setView(map_center, 13);
+        L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+		    maxZoom: 18,
+		    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+			'<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+			'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+		    id: 'mapbox.streets'
+	    }).addTo(map);
+        for (e in data) {
+            var gps = [parseFloat(data[e]["Latitude"]), parseFloat(data[e]["Longitude"])];
+            var marker = L.marker(gps).addTo(map);
         }
 
         
@@ -46,42 +48,44 @@ function checkRun() {
 function getRelevantData(results, location) {
     var data_set = [];
     results.forEach(function(r) {
-        link = api_list_get[r][0];
-        format = api_list_get[r][1];
-        var data;
-        switch(format) {
-            case "json":
-              data = getJSON(link);
-              break;
-            case "xml":
-              data = getXML(link);
-              break;
-        }
-        if (data !== undefined) {
-            (data.records).forEach(function(d) {
-                var longitude_terms = ["Longitude", "Long_GDA04"];
-                var lon_used;
-                for (lon in longitude_terms) {
-                    lon_term = longitude_terms[lon];
-                    if (d[lon_term] !== undefined) {
-                        lon_used = lon_term;
-                        break;
-                    } 
-                }
-                var lat_used;
-                var latitude_terms = ["Latitude", "Lat_GDA94"];
-                for (lat in latitude_terms) {
-                    lat_term = latitude_terms[lat];
-                    if (d[lat_term] !== undefined) {
-                        lat_used = lat_term;
-                        break;
-                    } 
-                }
-                var data_location = [d[lon_used], d[lat_used]];
-                if (checkLocation(data_location, location)) {
-                    data_set.push(d);
-                }
-            });
+        if (api_list_get[r] !== undefined) {
+            link = api_list_get[r][0];
+            format = api_list_get[r][1];
+            var data;
+            switch(format) {
+                case "json":
+                data = getJSON(link);
+                break;
+                case "xml":
+                data = getXML(link);
+                break;
+            }
+            if (data !== undefined) {
+                (data.records).forEach(function(d) {
+                    var longitude_terms = ["Longitude", "Long_GDA04"];
+                    var lon_used;
+                    for (lon in longitude_terms) {
+                        lon_term = longitude_terms[lon];
+                        if (d[lon_term] !== undefined) {
+                            lon_used = lon_term;
+                            break;
+                        } 
+                    }
+                    var lat_used;
+                    var latitude_terms = ["Latitude", "Lat_GDA94"];
+                    for (lat in latitude_terms) {
+                        lat_term = latitude_terms[lat];
+                        if (d[lat_term] !== undefined) {
+                            lat_used = lat_term;
+                            break;
+                        } 
+                    }
+                    var data_location = [d[lon_used], d[lat_used]];
+                    if (checkLocation(data_location, location)) {
+                        data_set.push(d);
+                    }
+                });
+            }
         }
     });
     return data_set;

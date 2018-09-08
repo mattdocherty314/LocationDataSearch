@@ -7,11 +7,11 @@ function pageLoad() {
     //console.log("Page Loaded!");
     var res = ["Environmental Monitoring Site Locations"];
     var loc = [148, -20, 1];
-    var data = getLocations(res, loc);
+    var data = getRelevantData(res, loc);
     console.log(data);
 }
 
-function getLocations(results, location) {
+function getRelevantData(results, location) {
     var data_set = [];
     results.forEach(function(r) {
         link = api_list[r][0];

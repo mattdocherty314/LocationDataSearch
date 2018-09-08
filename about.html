@@ -3,11 +3,39 @@
         <title> About </title>
     </head>
     <body>
+        <a href="index.html">Home</a>
         <h1> Location Data Search </h1>
         <h2> About </h2>
-        <p>
-            This is a website that was developed for GovHack 2018. The goal with this project was to
-            allow for the searching of datasets in a given area.
-        </p>
+        
+        <p><strong>What is the goal? </strong></p>
+        <li>People can search for 'electronics store in Brisbane CBD' and find what they're looking for but searching for 'Accident Data Brisbane CBD' returns semi-relevant or irrelevant data.</li>
+        <li>You can search for the data in the 'Input Data' search box andthe location in the 'Location Search' box. This will return all the data it has found.</li>
+
+        <p><strong>What did you use? </strong></p>
+        <li>Plain NodeJS was used as the server.</li>
+        <li>HTML, CSS & JavaScript was used to develop the client.</li>
+        <li>OpenStreetMaps was used with Leaflet to display the location data.</li>
+        
+        <p><strong>What were the roles?</strong></p>
+        <li>Matthew: Communicating with the APIs and the search.</li>
+        <li>Reuben: Displays the data in a meaningful format.</li>
+
+        <p><strong>How does it work?</strong></p>
+        <li>'Data Search' searches the description of the data for matching values.</li>
+        <li>'Location Search' searches the data's GPS co-ords for if it is within the range.</li>
+        <li>Once the data found it is returned as JSON and is filtered through the output methods.</li>
+
+        <p><strong>What were some of the difficulties?</strong></p>
+        <li>Getting all the names of the same type of data, e.g Longitude/Long & Latitude/Lat.</li>
+        <li>Interacting with the API.</li>
+
+        <p><strong>What still needs to be done?</strong></p>
+        <li>Designing the UI.</li>
+        <li>Adding a way to add datasets.</li>
+        <li>More search filters.</li>
+
+        <h2>Credit</h2>
+        <li>OpenStreetMap for the Geocoding API and map.</li>
+        <li>Data Gov QLD for the data and their APIs.</li>
     </body>
 </html>

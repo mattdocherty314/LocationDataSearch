@@ -1,8 +1,18 @@
 <html>
     <head>
+        <title> Home </title>
         <script src="api-get.js"></script>
     </head>
     <body>
-        <p>Test</p>
+        <h1> Location Data Search </h1>
+        <p> Data Search: </p><input id="input_search">
+        <p> Location: </p><input id="location_search">
+        <br/>
+        <button type="submit" id="search"> Search </button>
+        <p id="Location Result" hidden></p>
+        <p id="Search Result" hidden></p>
+
+        <div id="results">
+        </div>
     </body>
 </html>

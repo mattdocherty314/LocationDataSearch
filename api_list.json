@@ -76,5 +76,65 @@
         "desc": "DSITIA staff sample Chlorophyll-a, observe Secchi and measure physiochemical profiles at seven Tin Can Inlet and Snapper Creek sites and sample nutrients at three sites.",
         "api_key": "https://data.qld.gov.au/api/action/datastore_search?resource_id=fd80c3f5-952a-476d-87b0-651fd44e8303",
         "api_type": "json"
+    },
+    {
+        "title": "Road Crash Locations",
+        "desc": "Location and characteristics of crashes within Queensland for all reported Road Traffic Crashes 1 January 2001 to 31 December 2017, (property damage only crashes to 31 December 2010).",
+        "api_key": "https://data.qld.gov.au/api/action/datastore_search?resource_id=e88943c0-5968-4972-a15f-38e120d72ec0",
+        "api_type": "json"
+    },
+    {
+        "title": "2017 Traffic Census Data",
+        "desc": "Traffic census for the Queensland state declared road network for 2017.",
+        "api_key": "https://data.qld.gov.au/api/action/datastore_search?resource_id=0304d54b-9c6b-4678-b51a-d1594a817ce9",
+        "api_type": "json"
+    },
+    {
+        "title": "2016 Traffic Census Data",
+        "desc": "Traffic census for the Queensland state declared road network for 2016.",
+        "api_key": "https://data.qld.gov.au/api/action/datastore_search?resource_id=aa1c4860-5abe-425e-8338-123079ce7a1a",
+        "api_type": "json"
+    },
+    {
+        "title": "2015 Traffic Census Data",
+        "desc": "Traffic census for the Queensland state declared road network for 2015.",
+        "api_key": "https://data.qld.gov.au/api/action/datastore_search?resource_id=c267110e-a249-466d-ab06-d1d0c6c6eaa2",
+        "api_type": "json"
+    },
+    {
+        "title": "2014 Traffic Census Data",
+        "desc": "Traffic census for the Queensland state declared road network for 2014.",
+        "api_key": "https://data.qld.gov.au/api/action/datastore_search?resource_id=26a60055-acf7-409d-8891-593b991c2ff4",
+        "api_type": "json"
+    },
+    {
+        "title": "2013 Traffic Census Data",
+        "desc": "Traffic census for the Queensland state declared road network for 2013.",
+        "api_key": "https://data.qld.gov.au/api/action/datastore_search?resource_id=17b8fc9f-01a4-41b7-bd23-b58e32773095",
+        "api_type": "json"
+    },
+    {
+        "title": "2012 Traffic Census Data",
+        "desc": "Traffic census for the Queensland state declared road network for 2012.",
+        "api_key": "https://data.qld.gov.au/api/action/datastore_search?resource_id=d4f85272-e616-4829-96e7-c375710d17b7",
+        "api_type": "json"
+    },
+    {
+        "title": "2011 Traffic Census Data",
+        "desc": "Traffic census for the Queensland state declared road network for 2011.",
+        "api_key": "https://data.qld.gov.au/api/action/datastore_search?resource_id=69bb369e-2f99-4b8e-b7d3-77ea04f0ed76",
+        "api_type": "json"
+    },
+    {
+        "title": "2010 Traffic Census Data",
+        "desc": "Traffic census for the Queensland state declared road network for 2010.",
+        "api_key": "https://data.qld.gov.au/api/action/datastore_search?resource_id=20f27095-f76a-4400-9f71-76cba6232d8c",
+        "api_type": "json"
+    },
+    {
+        "title": "2004-2009 Traffic Census Data",
+        "desc": "Traffic census for the Queensland state declared road network for 2004-2009.",
+        "api_key": "https://data.qld.gov.au/api/action/datastore_search?resource_id=b99c337d-bb36-46a9-bb1c-78657cc52e21",
+        "api_type": "json"
     }
 ]

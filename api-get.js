@@ -83,7 +83,7 @@ function getRelevantData(results, location) {
 }
 
 function getLatitudeTerm(data, index) {
-    var latitude_terms = ["Latitude", "Lat_GDA94"];
+    var latitude_terms = ["Latitude", "Lat_GDA94", "Crash_Latitude_GDA94", "LATITUDE"];
     for (lat in latitude_terms) {
         lat_term = latitude_terms[lat];
         if (data[index][lat_term] !== undefined) {
@@ -93,7 +93,7 @@ function getLatitudeTerm(data, index) {
 }
 
 function getLongitudeTerm(data, index) {
-    var longitude_terms = ["Longitude", "Long_GDA04"];
+    var longitude_terms = ["Longitude", "Long_GDA04", "Crash_Longitude_GDA94", "LONGITUDE"];
     for (lon in longitude_terms) {
         lon_term = longitude_terms[lon];
         if (data[index][lon_term] !== undefined) {
